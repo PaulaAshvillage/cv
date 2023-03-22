@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+::selection {
+  background-color: #19472a;
+  color: #b2bbc0;
+}
 body {
   margin: 0px;
 }
@@ -25,4 +29,31 @@ h3 {
   background-color: #b2bbc0;
   padding-top: 50px;
   padding-bottom: 90px;
+}
+.main > article + article {
+  margin-top: 50px;
+  border-top: solid #19472a 5px;
+}
+.main section + section {
+  margin-top: 30px;
+}
+
+.nav-link > a + a {
+  margin-left: 50px;
+}
+
+.nav-link:link {
+  color: #19472a;
+}
+.nav-link:visited {
+  color: #3d414c;
+}
+.nav-link:hover {
+  color: #822007;
+}
+.nav-link:active {
+  color: #000;
+}
+.profile::after {
+  content: "✌️🌳🌻⛹️‍♀️🌱";
 }
