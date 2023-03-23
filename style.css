@@ -11,37 +11,34 @@ body {
 html {
   font-family: "Courier New", Courier, monospace;
 }
-/**************************************************************/
-/* Specific Stylings */
 h1,
 h2,
 h3 {
   font-family: andale mono, monospace;
 }
-
-.main {
+/**************************************************************/
+/* Specific Stylings */
+.main-content {
   padding: 80px;
   max-width: 800px;
   margin: 0 auto;
 }
-.header {
+.site-header {
   text-align: center;
   background-color: #b2bbc0;
   padding-top: 50px;
   padding-bottom: 90px;
 }
-.main > article + article {
+.main-content > article + article {
   margin-top: 50px;
   border-top: solid #19472a 5px;
 }
-.main section + section {
+.main-content section + section {
   margin-top: 30px;
 }
-
 .nav-link > a + a {
   margin-left: 50px;
 }
-
 .nav-link:link {
   color: #19472a;
 }
