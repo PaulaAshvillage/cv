@@ -54,3 +54,9 @@ h3 {
 .profile::after {
   content: "✌️🌳🌻⛹️‍♀️🌱";
 }
+.company-name {
+  display: inline;
+}
+.hire-date {
+  display: inline;
+}
