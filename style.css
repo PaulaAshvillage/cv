@@ -16,19 +16,39 @@ h2,
 h3 {
   font-family: andale mono, monospace;
 }
+h2 {
+  position: relative;
+  right: 16px;
+}
 /**************************************************************/
 /* Specific Stylings */
+aside {
+  background-color: #19472a;
+  color: #b2bbc0;
+  position: absolute;
+  padding-top: 10px;
+  width: 100px;
+  height: 40px;
+  top: 2px;
+  right: 2px;
+}
+
 .main-content {
   padding: 80px;
   max-width: 800px;
   margin: 0 auto;
 }
+.main-content article {
+  padding-left: 16px;
+}
+
 .site-header {
   text-align: center;
   background-color: #b2bbc0;
   padding-top: 50px;
   padding-bottom: 90px;
 }
+
 .main-content > article + article {
   margin-top: 50px;
   border-top: solid #19472a 5px;
