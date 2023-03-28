@@ -21,9 +21,19 @@ h2 {
   position: relative;
   right: 1rem;
 }
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 24px;
+  }
+}
+
 /**************************************************************/
 /* Specific Stylings */
-
 aside {
   background-color: #19472a;
   color: #b2bbc0;
@@ -34,6 +44,16 @@ aside {
   top: 0.1rem;
   right: 0.1rem;
 }
+@media screen and (min-width: 992px) {
+  aside {
+    position: fixed;
+  }
+}
+@media print {
+  aside {
+    display: none;
+  }
+}
 .cv-header {
   font-size: 3rem;
 }
@@ -43,7 +63,6 @@ aside {
 .about {
   font-size: 0.25em;
 }
-
 .main-content {
   padding: 4rem;
   max-width: 80ch;
@@ -59,13 +78,22 @@ aside {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
-
 .main-content > article + article {
   margin-top: 2.5rem;
   border-top: solid #19472a 0.25rem;
 }
+@media screen {
+  .main-content > article + article {
+    margin-top: 5rem;
+  }
+}
 .main-content section + section {
   margin-top: 2rem;
+}
+@media screen {
+  .main-content section + section {
+    margin-top: 4rem;
+  }
 }
 .nav-link > a + a {
   margin-left: 2.5rem;
@@ -81,6 +109,11 @@ aside {
 }
 .nav-link:active {
   color: #000;
+}
+@media print {
+  nav {
+    display: none;
+  }
 }
 .profile::after {
   content: "✌️🌳🌻⛹️‍♀️🌱";
