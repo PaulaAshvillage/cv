@@ -54,6 +54,27 @@ aside {
     display: none;
   }
 }
+.site-header {
+  text-align: center;
+  background: rgb(178, 187, 192);
+  background: linear-gradient(
+    345deg,
+    rgba(178, 187, 192, 1) 18%,
+    rgba(25, 71, 42, 1) 95%
+  );
+  background-color: #b2bbc0;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 1600px) {
+  .site-header {
+    background: radial-gradient(
+      circle,
+      rgba(178, 187, 192, 1) 25%,
+      rgba(25, 71, 42, 1) 42%
+    );
+  }
+}
 .cv-header {
   font-size: 3rem;
 }
@@ -72,12 +93,6 @@ aside {
   padding-left: 1rem;
 }
 
-.site-header {
-  text-align: center;
-  background-color: #b2bbc0;
-  padding-top: 2.5rem;
-  padding-bottom: 3rem;
-}
 .main-content > article + article {
   margin-top: 2.5rem;
   border-top: solid #19472a 0.25rem;
@@ -103,7 +118,7 @@ aside {
 @media screen and (min-width: 786px) {
   .navigation-header {
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
     justify-content: center;
   }
 }
@@ -138,4 +153,17 @@ aside {
     justify-content: space-between;
     align-items: center;
   }
+}
+.site-footer {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  text-align: center;
+  background: radial-gradient(
+    circle,
+    rgba(178, 187, 192, 1) 25%,
+    rgba(25, 71, 42, 1) 42%
+  );
+}
+.note-footer::before {
+  content: "👍";
 }
