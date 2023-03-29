@@ -82,21 +82,30 @@ aside {
   margin-top: 2.5rem;
   border-top: solid #19472a 0.25rem;
 }
-@media screen {
+@media screen and (min-width: 786px) {
   .main-content > article + article {
-    margin-top: 5rem;
+    margin-top: 3.5rem;
   }
 }
 .main-content section + section {
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
-@media screen {
+@media screen and (min-width: 786px) {
   .main-content section + section {
     margin-top: 4rem;
   }
 }
-.nav-link > a + a {
-  margin-left: 2.5rem;
+.navigation-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 786px) {
+  .navigation-header {
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+  }
 }
 .nav-link:link {
   color: #19472a;
@@ -118,9 +127,15 @@ aside {
 .profile::after {
   content: "✌️🌳🌻⛹️‍♀️🌱";
 }
-.company-name {
-  display: inline;
+.job-details {
+  display: flex;
+  flex-direction: column;
 }
-.hire-date {
-  display: inline;
+@media screen and (min-width: 786px) {
+  .job-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
