@@ -1,9 +1,16 @@
+:root {
+  --color-green: #19472a;
+  --color-gray: #b2bbc0;
+  --color-red: #822007;
+  --color-cobalt: #3d414c;
+  --color-black: #000;
+}
 * {
   box-sizing: border-box;
 }
 ::selection {
-  background-color: #19472a;
-  color: #b2bbc0;
+  background-color: var(--color-green);
+  color: var(--color-gray);
 }
 body {
   margin: 0px;
@@ -21,22 +28,12 @@ h2 {
   position: relative;
   right: 1rem;
 }
-@media screen and (min-width: 786px) {
-  html {
-    font-size: 22px;
-  }
-}
-@media screen and (min-width: 992px) {
-  html {
-    font-size: 24px;
-  }
-}
 
 /**************************************************************/
 /* Specific Stylings */
 aside {
-  background-color: #19472a;
-  color: #b2bbc0;
+  background-color: var(--color-green);
+  color: var(--color-gray);
   position: absolute;
   padding-top: 0.5rem;
   width: 6rem;
@@ -44,37 +41,20 @@ aside {
   top: 0.1rem;
   right: 0.1rem;
 }
-@media screen and (min-width: 992px) {
-  aside {
-    position: fixed;
-  }
-}
-@media print {
-  aside {
-    display: none;
-  }
-}
+
 .site-header {
   text-align: center;
-  background: rgb(178, 187, 192);
+  background: var(--color-gray);
   background: linear-gradient(
     345deg,
-    rgba(178, 187, 192, 1) 18%,
-    rgba(25, 71, 42, 1) 95%
+    var(--color-gray) 18%,
+    var(--color-green) 95%
   );
   background-color: #b2bbc0;
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
-@media screen and (min-width: 1600px) {
-  .site-header {
-    background: radial-gradient(
-      circle,
-      rgba(178, 187, 192, 1) 25%,
-      rgba(25, 71, 42, 1) 42%
-    );
-  }
-}
+
 .cv-header {
   font-size: 3rem;
 }
@@ -95,50 +75,38 @@ aside {
 
 .main-content > article + article {
   margin-top: 2.5rem;
-  border-top: solid #19472a 0.25rem;
+  border-top: solid var(--color-green) 0.25rem;
 }
-@media screen and (min-width: 786px) {
-  .main-content > article + article {
-    margin-top: 3.5rem;
-  }
-}
+
 .main-content section + section {
   margin-top: 3.5rem;
-}
-@media screen and (min-width: 786px) {
-  .main-content section + section {
-    margin-top: 4rem;
-  }
 }
 .navigation-header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 786px) {
-  .navigation-header {
-    flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-  }
+.nav-link {
+  transition: color 0.35s;
+  transition: background-color 0.15s ease;
 }
 .nav-link:link {
-  color: #19472a;
+  color: var(--color-green);
 }
 .nav-link:visited {
-  color: #3d414c;
+  color: var(--color-cobalt);
 }
 .nav-link:hover {
-  color: #822007;
+  color: var(--color-red);
 }
 .nav-link:active {
-  color: #000;
+  color: var(--color-black);
 }
-@media print {
-  nav {
-    display: none;
-  }
+.nav-link:focus {
+  background-color: var(--color-green);
+  color: var(--color-gray);
 }
+
 .profile::after {
   content: "✌️🌳🌻⛹️‍♀️🌱";
 }
@@ -146,24 +114,70 @@ aside {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 786px) {
-  .job-details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
+
 .site-footer {
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   text-align: center;
   background: radial-gradient(
     circle,
-    rgba(178, 187, 192, 1) 25%,
-    rgba(25, 71, 42, 1) 42%
+    var(--color-gray) 25%,
+    var(--color-green) 42%
   );
 }
 .note-footer::before {
   content: "👍";
+}
+.note-footer::after {
+  content: "📪";
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 22px;
+  }
+  .job-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation-header {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .main-content > article + article {
+    margin-top: 3.5rem;
+  }
+  .main-content section + section {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 24px;
+  }
+  aside {
+    position: fixed;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .site-header {
+    background: radial-gradient(
+      circle,
+      var(--color-gray) 25%,
+      var(--color-green) 42%
+    );
+  }
+}
+
+@media print {
+  aside {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
 }
