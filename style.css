@@ -78,12 +78,12 @@ aside {
 }
 
 .main-content > article + article {
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
   border-top: solid var(--color-green) 0.25rem;
 }
 
 .main-content section + section {
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 .navigation-header {
   display: flex;
@@ -155,7 +155,15 @@ aside {
     margin-top: 3.5rem;
   }
   .main-content section + section {
-    margin-top: 4rem;
+    margin-top: 2.5rem;
+  }
+  .main-article {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+  .content-wrapper {
+    padding-top: 0.33rem;
+    border-bottom: #000 solid;
   }
 }
 
