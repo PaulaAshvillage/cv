@@ -38,8 +38,8 @@ aside {
   padding-top: 0.5rem;
   width: 6rem;
   height: 2rem;
-  top: 0.1rem;
-  right: 0.1rem;
+  top: 0.75rem;
+  right: 1rem;
 }
 
 .site-header {
@@ -53,6 +53,10 @@ aside {
   background-color: #b2bbc0;
   padding-top: 2.5rem;
   padding-bottom: 3rem;
+}
+.site-header:hover aside {
+  transition: 0.25s;
+  transform: scale(120%);
 }
 
 .cv-header {
