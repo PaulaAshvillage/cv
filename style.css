@@ -40,6 +40,7 @@ aside {
   height: 2rem;
   top: 0.75rem;
   right: 1rem;
+  cursor: grabbing;
 }
 
 .site-header {
@@ -202,6 +203,7 @@ aside {
 
   .pull-switch {
     position: absolute;
+    cursor: grab;
     margin-left: 4rem;
     padding-block: 2rem;
     padding-inline: 1rem;
